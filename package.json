@@ -1,0 +1,16 @@
+{
+  "name": "lux-ai",
+  "version": "1.0.0",
+  "description": "Premium AI Assistant powered by Gemini",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "@google/genai": "latest"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}

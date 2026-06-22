@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LUX AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0b0b0f">
+</head>
+<body>
+
+    <div class="chat-container">
+        <header>
+            <div class="brand">
+                <span class="logo">✦</span>
+                <h2>LUX AI</h2>
+            </div>
+            <input type="password" id="apiKeyInput" placeholder="Enter Gemini API Key..." />
+        </header>
+
+        <div class="chat-box" id="chatBox">
+            <div class="message bot-message">
+                <div class="sender-label">LUX AI</div>
+                <div class="message-content">Welcome back. Insert your access key above to securely initialize our connection layer.</div>
+            </div>
+        </div>
+
+        <div class="input-container-wrapper">
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Ask LUX anything..." disabled>
+                <button id="sendBtn" disabled>➔</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator && !navigator.userAgent.includes('Electron')) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
