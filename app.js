@@ -1,4 +1,8 @@
 import { GoogleGenAI } from "https://esm.run/@google/genai";
+import { inject } from "https://esm.run/@vercel/analytics"; // Import Vercel Analytics
+
+// Initialize Vercel Analytics to start tracking page views instantly
+inject();
 
 const apiKeyInput = document.getElementById('apiKeyInput');
 const userInput = document.getElementById('userInput');
