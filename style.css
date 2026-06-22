@@ -22,7 +22,7 @@ body {
     background: var(--bg-main);
     color: var(--text-primary);
     display: flex;
-    height: 100vh;
+    height: 100dvh; /* Updated to 100dvh for mobile address bar adjustment */
     overflow: hidden;
 }
 
@@ -246,3 +246,37 @@ h2 {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+/* Mobile Responsiveness Fixes */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 16px;
+        gap: 12px;
+    }
+    
+    .brand {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    #apiKeyInput {
+        width: 100%;
+    }
+    
+    #apiKeyInput:focus {
+        width: 100%; /* Prevents the input from widening and breaking the layout */
+    }
+    
+    .chat-box {
+        padding: 16px;
+    }
+    
+    .input-container-wrapper {
+        padding: 12px 16px 24px 16px; /* Brings the input bar up into view */
+    }
+    
+    .message {
+        max-width: 95%; /* Gives messages more room to breathe on small screens */
+    }
+}
